@@ -1,0 +1,122 @@
+/* =============   Badge  ============= */
+
+.badge {
+  &:empty {
+    padding: 0px;
+    width: 15px;
+    height: 15px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 10px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  display: inline-block;
+  width: auto;
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 13px;
+  padding: .25em .6em;
+}
+
+.badge-primary {
+  background-color: $primary;
+}
+
+.badge-danger {
+  background-color: $danger;
+}
+
+.badge-warning {
+  background-color: $warning;
+  color:$white;
+}
+
+.badge-info {
+  background-color: $info;
+}
+
+.badge-success {
+  background-color: $success;
+}
+
+.badge-default {
+  background-color: #dde6e9;
+  color: #333;
+}
+
+.badge-indigo {
+  background-color: $indigo;
+  color:$white;
+}
+
+.badge-teal {
+  background-color: $teal;
+  color:$white;
+}
+
+.notify {
+  position: relative;
+  top: -34px;
+  right: -9px; }
+  .notify .heartbit {
+    position: absolute;
+    top: -20px;
+    right: -4px;
+    height: 26px;
+    width: 26px;
+    z-index: 10;
+    border: 5px solid #F6BB42;
+    border-radius: 70px;
+    -moz-animation: heartbit 1s ease-out;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: heartbit 1s ease-out;
+    -o-animation-iteration-count: infinite;
+    -webkit-animation: heartbit 1s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite; }
+  .notify .point {
+    width: 6px;
+    height: 6px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    background-color: #F6BB42;
+    position: absolute;
+    right: 6px;
+    top: -10px; }
+
+@-moz-keyframes heartbit {
+  0% {
+    -moz-transform: scale(0);
+    opacity: 0.0; }
+  25% {
+    -moz-transform: scale(0.1);
+    opacity: 0.1; }
+  50% {
+    -moz-transform: scale(0.5);
+    opacity: 0.3; }
+  75% {
+    -moz-transform: scale(0.8);
+    opacity: 0.5; }
+  100% {
+    -moz-transform: scale(1);
+    opacity: 0.0; } }
+
+@-webkit-keyframes heartbit {
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 0.0; }
+  25% {
+    -webkit-transform: scale(0.1);
+    opacity: 0.1; }
+  50% {
+    -webkit-transform: scale(0.5);
+    opacity: 0.3; }
+  75% {
+    -webkit-transform: scale(0.8);
+    opacity: 0.5; }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0.0; } }

@@ -1,0 +1,71 @@
+.problem{
+    background:#f9f9f9;
+    margin-top: 56px;
+}
+.problem-left{
+    background:white;
+}
+.banner{
+    height:172px;
+    background:url(../img/problem-bg.jpg) no-repeat center;
+}
+.search-btn{
+    background:#00b9c3;
+    color:white;
+    border:none;
+    white-space:nowrap;
+}
+.search-btn:focus{
+    outline:none;
+}
+.problem-item:after{
+    content:"\25BC";
+    display:inline-block;
+    float:right;
+}
+.problem-left .problem-item,.problem-left .problem-list{
+    cursor:pointer;
+    user-select:none;
+}
+.problem-title{
+    position:relative;
+}
+.problem-title:before{
+    content:"";
+    display:inline-block;
+    width:.4rem;
+    height:1.3rem;
+    background:#00b9c3;
+    margin-right:.5rem;
+    position:absolute;
+    bottom:.4rem;
+    left:0;
+}
+.problem-list{
+    display:none;
+    height:12rem;
+    overflow:auto;
+}
+.problem-list.active{
+    display:block;
+}
+.problem-list li:hover{
+    color:#00b9c3;
+}
+
+.pContent-text{
+    display:inline-block;
+    text-indent:2rem;
+}
+.list-unstyled > a{
+    color: #000!important;
+}
+.pageList{
+    margin-top: 20px;
+}
+.pageList ul{
+    float: right;
+}
+.h-cp{
+    cursor: pointer;
+}

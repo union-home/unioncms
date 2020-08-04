@@ -1,0 +1,47 @@
+/* =============   Profil  ============= */
+
+.friends-group a {
+  margin: 3px;
+  display: block;
+  float: left;
+  width: 40px;
+  &.more {
+    width: 40px;
+    height: 40px;
+    background: #eee;
+    line-height: 40px;
+    text-align: center;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    color: #999;
+    &:hover {
+      background: $primary;
+      color: #fff;
+    }
+  }
+}
+
+.comments-list > li {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  img {
+    float: left;
+    margin-right: 20px;
+  }
+  .content {
+    overflow: hidden;
+    ul {
+      margin: 0;
+      padding: 0;
+      li > a {
+        color: #999;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}

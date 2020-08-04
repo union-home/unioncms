@@ -1,0 +1,119 @@
+
+.login-container{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:url("../img/login-bg.png") no-repeat center;
+    background-size:cover;
+    color:white;
+
+}
+.login-cover{
+    height:100%;
+    background:rgba(0,0,0,.2);
+    padding:4rem;
+}
+.login-group{
+    padding:2rem 3.1rem;
+    height:100%;
+    /*background:rgba(255,255,255,.1);*/
+    /*box-shadow:0 2px 10px 2px rgba(0,0,0,.2);*/
+}
+.login-title{
+    font-size:2rem;
+    /*margin:6rem 1rem 3rem;*/
+}
+/*.login-link{*/
+/*    margin-top:3rem;*/
+/*}*/
+.cms-btn{
+    padding:.5rem 2rem;
+    border-radius:100px;
+    color:#fff;
+    border:1px solid #79ddd7;
+}
+.cms-btn:hover{
+    color:#fff;
+}
+.login-description{
+    background:#79ddd7;
+}
+.login-help{
+    color:#79ddd7;
+}
+.login-help:hover{
+    color:#79ddd7;
+}
+.login-left{
+    /*padding-left:3rem;*/
+}
+.login-right{
+    /*margin-top:10rem;*/
+}
+
+
+.login-form>span{
+    display:inline-block;
+    width:60px;
+    text-align:justify;
+    text-justify:distribute-all-lines;/*ie6-8*/
+    text-align-last:justify;/* ie9*/
+    -moz-text-align-last:justify;/*ff*/
+    -webkit-text-align-last:justify;/*chrome 20+*/
+}
+.login-form input{
+    background:rgba(255,255,255,.8);
+    border-color:transparent;
+    padding:3px 10px;
+    width:200px;
+    /*color:white;*/
+}
+.login-form .cms-btn{
+    border-radius:5px;
+    padding:.5rem 2.1rem;
+}
+.login-form .login-btn{
+    background:linear-gradient(to right,#5796fa,#7adfd6);
+    background:-webkit-linear-gradient(to right,#5796fa,#7adfd6);
+    background:-moz-linear-gradient(to right,#5796fa,#7adfd6);
+    background:-ms-linear-gradient(to right,#5796fa,#7adfd6);
+    border:none;
+}
+.login-form .register-btn{
+    border-color:#fff;
+}
+
+.login-footer{
+    font-size:12px;
+}
+
+.verify-text{
+    position:absolute;
+    right:1px;
+    top:1px;
+    background:linear-gradient(to right,#5796fa,#7adfd6);
+    background:-webkit-linear-gradient(to right,#5796fa,#7adfd6);
+    background:-moz-linear-gradient(to right,#5796fa,#7adfd6);
+    background:-ms-linear-gradient(to right,#5796fa,#7adfd6);
+}
+
+
+@media (max-width: 768px){
+    /*.login-right{*/
+    /*    margin-top:3rem;*/
+    /*}*/
+    .login-title{
+        /*margin-top:3rem;*/
+    }
+    .login-group{
+        padding:2rem 1rem;
+    }
+    .login-cover{
+        padding: .5rem;
+    }
+
+
+    .login-form input{
+        width:170px;
+    }
+}

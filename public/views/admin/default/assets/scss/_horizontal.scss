@@ -1,0 +1,48 @@
+/* =============   Horizontal  ============= */
+body.horizontal{
+  padding-top:0px;
+
+}
+body.horizontal .main-horizontal-nav{
+  width: 100%;
+  float: left;
+  z-index: 50;
+  position:relative;
+  background-image: linear-gradient(to right, #4b71fa, #924bfa);
+}
+
+body.horizontal .top-bar{
+  position:relative;
+}
+body.horizontal .main-content {
+  padding-bottom:80px;
+  width: 100%;
+  margin-left: 0px;
+  float:left;
+}
+
+body.horizontal .page-header {
+  margin-left:0px;
+  margin-right:0px;
+  margin-top:15px;
+  margin-bottom: 15px;
+  box-shadow:none;
+  background:none;
+  }
+body.horizontal .page-header h2 {
+    margin: 2px 0;
+    font-size: 18px;
+}
+
+body.horizontal .main-sidebar-nav{
+  position: relative;
+  top:0px;
+  width: 100%;
+  height: auto;
+  z-index:45;
+}
+
+body.horizontal .footer{
+  margin-left:0px;
+
+}

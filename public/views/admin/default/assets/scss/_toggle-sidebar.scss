@@ -1,0 +1,132 @@
+/* =============   Toggle Sidebar    ============= */
+
+.nav-tab-card {
+  margin: 0;
+  padding: 0;
+  > li {
+    padding: 0px;
+    width: 50%;
+    margin: 0;
+    display: block;
+    float: left;
+    > a {
+      display: block;
+      padding: 14px 15px;
+      text-align: center;
+      background: #fbfbfb;
+      font-size: 14px;
+      text-transform: capitalize;
+      color: #676a6c;
+      border-bottom: 2px solid transparent;
+    }
+    &.active a {
+      border-bottom-color: $primary;
+      color: $primary;
+    }
+  }
+}
+
+.toggle-sidebar {
+  position: fixed;
+  right: 0px;
+  margin-right: -270px;
+  top: 60px;
+  z-index: 9999;
+  width: 270px;
+  border-left: 1px solid #eee;
+  -moz-transition: margin-right 0.3s;
+  -o-transition: margin-right 0.3s;
+  -webkit-transition: margin-right 0.3s;
+  transition: margin-right 0.3s;
+  height: 100%;
+  background: #fff;
+  padding-bottom: 20px;
+  > .nano > .nano-content > div {
+    padding-bottom: 40px;
+  }
+  &.right-sidebar-toggle {
+    margin-right: 0px;
+  }
+}
+
+.sidebar-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  li {
+    border-bottom: 1px solid #e7eaec;
+    padding: 15px 20px;
+    list-style: none;
+    > a {
+      color: inherit;
+      display: block;
+      h4 {
+        margin-bottom: 5px;
+        font-weight: 500;
+        font-size: 15px;
+      }
+      .small {
+        margin-top: 0px;
+        margin-bottom: 5px;
+      }
+    }
+    &.sidebar-title {
+      background: #fefefe;
+      h3 {
+        margin-bottom: 0px;
+        text-transform: capitalize;
+      }
+      &:hover {
+        background: #fefefe;
+      }
+    }
+    &:hover {
+      background: #fefefe;
+    }
+  }
+  &.projects-list > li {
+    padding: 15px 0px;
+  }
+}
+
+.sidebar-contact-list {
+  li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    a {
+      display: block;
+      &:hover {
+        color: #8cb5f4;
+      }
+    }
+    &:hover {
+      background: #f1f1f1;
+    }
+    &:last-child {
+      border-bottom: 0px;
+      &:hover {
+        background: transparent;
+      }
+    }
+    .btn {
+      display: inline-block;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  .media-box-object {
+    width: 50px;
+    margin-right: 15px;
+  }
+  .media-box-body {
+    overflow: hidden;
+    strong {
+      font-weight: 500;
+    }
+  }
+}

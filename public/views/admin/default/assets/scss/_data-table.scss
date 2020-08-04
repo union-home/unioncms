@@ -1,0 +1,45 @@
+/* =============  Date Table  ============= */
+
+div.dataTables_filter input {
+  margin-left: 0.5em;
+  display: inline-block;
+  box-shadow: none;
+  border: 1px solid #e9ecef;
+  height: 39px;
+}
+
+
+div.dataTables_length select {
+  box-shadow: none;
+  border: 1px solid #ddd;
+  height: 39px;
+  text-align: center;
+}
+
+div.dataTables_paginate a {
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 1.5em;
+  padding: 0.5em 1em;
+  margin-left: 2px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  color: #54667a;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  &.disabled {
+    cursor: not-allowed;
+  }
+  &:hover, &.current {
+    background: $primary;
+    color: #fff;
+  }
+}
+
+@media (min-width: 768px){
+	.dataTables_length, .dataTables_info {
+	  float: left;
+	  width: 50%;
+	}
+}

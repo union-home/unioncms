@@ -1,0 +1,105 @@
+.banner{
+    background:url(../img/banner-bg.png) no-repeat center;
+    background-size:cover;
+    height:860px;
+}
+
+.banner-title{
+    font-size:2.5rem;
+}
+.banner-text{
+    font-size:1rem;
+    width:60%;
+}
+
+
+.experience-title{
+    font-size:2rem;
+}
+
+.choose{
+    overflow:hidden;
+}
+.choose-img{
+    width:49vw;
+}
+
+.business-img{
+    position:relative;
+}
+.round{
+    width:6rem;
+    height:6rem;
+    line-height:6rem;
+    border-radius:50%;
+    background:linear-gradient(to right,#5796fa,#7adfd6)
+}
+.cloud-icon{
+    width:50%;
+}
+.round-bg{
+    background:linear-gradient(to right,#92bbfc,#a8eae4)
+}
+.round-bg{
+    position:absolute;
+    top:0;
+    left:50%;
+    margin-top:3px;
+    margin-left:-39px;
+    z-index:-10;
+}
+
+
+.program{
+    position:relative;
+    overflow:hidden;
+}
+.program .container{
+    padding:5vw 15px;
+}
+.program-bg{
+    height:100%;
+}
+
+.program-img{
+    /*overflow:hidden;*/
+}
+.program-img img{
+    width:100%;
+}
+
+
+.news-more:hover{
+    color:#00b9c3;
+}
+
+
+
+
+
+
+@media (max-width: 768px){
+    .banner{
+        height:400px;
+    }
+    .banner-text{
+        width:100%;
+    }
+    .banner-title{
+        font-size:2rem;
+    }
+    .choose-img{
+        position:relative;
+        width:106%;
+    }
+    .program-img{
+        overflow:visible;
+    }
+    .program-img img {
+        position:initial;
+        width:100%;
+    }
+    .program .container{
+        padding-top:0 !important
+    }
+}

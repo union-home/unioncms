@@ -1,0 +1,50 @@
+1.0.9更新记录
+1、union_members添加新字段
+    ALTER TABLE  `union_members` ADD  `signature` VARCHAR( 255 ) NULL DEFAULT  '' COMMENT  '个性签名';
+2、选择性删除
+    ALTER TABLE  `union_members` DROP  `open_id` ;
+    ALTER TABLE  `union_members` DROP  `wx_openid` ; //微信openid
+    ALTER TABLE  `union_members` DROP  `smallwx_openid` ;//微信小程序openid
+3、修复模块加载的路由bug
+4、更新程序，自动读取数据库版本更新(更改database底部的目录规则）
+
+1.0.8 更新记录
+1、增加菜单，广告管理，广告列表，banner列表
+2、新增广告数据库表advertisement
+3、新增banner数据库表banner
+4、新增广告管理【增删改查】，banner管理【增删改查】
+4、增加蜘蛛访问判断、标识，home_visit_logs增加两个字段
+5、curl请求去除证书验证
+6、增加索引
+增加文章内容管理article和article_category
+7、增加模块的自定义函数：Helper/function.php
+
+
+1.0.7 更新记录
+1、紧急修复后台登录bug
+2、增加解压文件函数
+
+1.0.6更新记录
+1、修改中间件CheckHome,添加module登录判断，如果当module里面有登录，则跳转到module里面
+2、增加后台编辑器自定义上传路径
+3、优化数据库字段content的类型和长度
+4、图片裁剪
+composer require intervention/image
+5、增加循环创建目录函数
+mk_dir
+6、修改附件表的搜索条件orwhere("path_md5","=",md5($path))->orwhere("path",$path)
+7、增加中文字体包
+8、水印位置的值变化
+9、优化案例列表的排序
+10、后台登录修改
+
+
+1.0.5更新记录
+1、增加模板自定义路由、命名空间(执行composer dump-autoload)
+2、美化后台功能模板页面、修复BUG
+3、增加支付插件，api路由和分组
+    INSERT INTO `union_settings` (`type`, `key`, `value`) VALUES ('pay', 'pay_driver', 'unionPay');
+4、增加TransferOrder模型和表
+5、增加是否是手机浏览器、微信浏览器和支付宝浏览器的函数
+6、在appserverProvider的boot方法中增加设置PHP错误级别
+7、删除新安装包里面的多余的模块数据

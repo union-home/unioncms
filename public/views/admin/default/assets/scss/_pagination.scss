@@ -1,0 +1,39 @@
+/* =============   Pagination   ============= */
+
+.pagination > {
+  li > {
+    a, span {
+      color: $primary;
+    }
+  }
+  .active > {
+    a {
+      z-index: 3;
+      color: #fff;
+      cursor: default;
+      background-color: $primary;
+      border-color: $primary;
+      &:focus, &:hover {
+        z-index: 3;
+        color: #fff;
+        cursor: default;
+        background-color: $primary;
+        border-color: $primary;
+      }
+    }
+    span {
+      z-index: 3;
+      color: #fff;
+      cursor: default;
+      background-color: $primary;
+      border-color: $primary;
+      &:focus, &:hover {
+        z-index: 3;
+        color: #fff;
+        cursor: default;
+        background-color: $primary;
+        border-color: $primary;
+      }
+    }
+  }
+}

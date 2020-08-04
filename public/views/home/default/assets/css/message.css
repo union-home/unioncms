@@ -1,0 +1,7 @@
+.banner{
+    height:340px;
+    background:url(../img/message-banner-bg.png) no-repeat center;
+}
+.message-content>textarea{
+    height:130px;
+}

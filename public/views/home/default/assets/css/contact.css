@@ -1,0 +1,12 @@
+.banner{
+    height:340px;
+    background:url(../img/contact-banner-bg.png) no-repeat center;
+}
+.buiduMap{
+    height:460px;
+}
+@media(max-width: 768px){
+    .buiduMap{
+        height:300px;
+    }
+}

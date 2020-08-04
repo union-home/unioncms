@@ -1,0 +1,18 @@
+/* =============   Pie Chart  ============= */
+
+.easypie-chart {
+  display: inline-block;
+  position: relative;
+  padding: 0 6px;
+  span {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    margin-left: -50%;
+    height: 30px;
+    margin-top: -15px;
+    font-size: 20px;
+  }
+}

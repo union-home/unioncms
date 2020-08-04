@@ -1,0 +1,123 @@
+/* =============   Common	============= */
+
+body {
+  font-family: $font-secondary;
+  color: #575962;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  overflow-x: hidden;
+  background-color: #f3f5f7;
+  height: 100%;
+  position: relative;
+  padding-top: 60px;
+}
+
+a {
+  text-decoration: none;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: $primary;
+  
+  &:hover, &:focus {
+    text-decoration: none;
+    outline: 0 !important;
+  }
+  &.text-muted:hover {
+    color: $primary;
+  }
+  blockquote {
+    color: #666;
+  }
+}
+
+blockquote {
+  font-style: italic;
+}
+
+hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+button:focus {
+  outline: 0 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0px;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 36px; 
+}
+
+h2 {
+  font-size: 24px; 
+}
+
+h3 {
+  font-size: 21px;
+}
+
+h4 {
+  font-size: 18px; 
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 14px;
+}
+label {
+  font-weight: 400;
+}
+
+strong, b {
+  font-weight: 500 !important;
+}
+  
+.main-content{
+	padding: 0px 30px 30px 30px;
+	position: relative;
+	margin-left: 240px;
+
+}
+
+.default-logo {
+	display: none;
+}
+
+.admin-logo.dark-logo {
+  background-color: #263238;
+  border-bottom: 1px solid #3a454b;
+}
+
+.demo-grid-block {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  color: #777;
+  margin-bottom: 15px;
+  padding: 15px;
+  text-align: center;
+}
+
+pre {
+  background-color: transparent;
+  border-radius: 0px;
+  border: 0;
+  overflow: hidden;
+}
+
+.box{
+  background:#fff;
+  padding: 1.25rem;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+

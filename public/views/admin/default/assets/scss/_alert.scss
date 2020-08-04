@@ -1,0 +1,29 @@
+/* =============   Alert	============= */
+
+.alert strong {
+  font-weight: 600 !important;
+}
+
+.alert-danger {
+  color: $danger;
+  background-color: transparent;
+  border-color: $danger;
+}
+
+.alert-warning {
+  color: #f8c200;
+  background-color: transparent;
+  border-color: #f8c200;
+}
+
+.alert-info {
+  color: #56afd7;
+  background-color: transparent;
+  border-color: #56afd7;
+}
+
+.alert-success {
+  color: $success;
+  background-color: transparent;
+  border-color: $success;
+}

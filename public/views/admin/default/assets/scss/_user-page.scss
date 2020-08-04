@@ -1,0 +1,39 @@
+/* =============   User Page   ============= */
+
+.misc-wrapper {
+  width: 100%;
+  height: 100%;
+  display: table;
+  position: relative;
+  padding: 20px 0;
+}
+
+.misc-content {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  position: relative;
+}
+
+.misc-box {
+  background-color: #fff;
+  padding: 15px;
+  .img-circle {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+  }
+  .checkbox {
+    margin: 0px;
+    padding-top: 0px;
+  }
+  h4 {
+    line-height: 26px;
+  }
+}
+
+.misc-footer {
+  padding: 20px 15px;
+}
+
+.misc-header {
+  padding: 15px;
+}

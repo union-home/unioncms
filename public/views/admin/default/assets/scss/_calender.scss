@@ -1,0 +1,73 @@
+/* =============   Calender   ============= */
+
+#external-events {
+  h4 {
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .fc-event {
+    background: $primary;
+    padding: 7px 10px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+    margin-bottom: 10px;
+
+  }
+}
+
+.fc-button {
+  color: inherit;
+  border: 1px solid #e4e5e7;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+
+}
+
+.fc button{
+  font-size:12px;
+  text-transform: capitalize;
+  padding:0 10px;
+  height:35px;
+  line-height:35px;
+}
+
+.fc-state-default {
+  background-color: $white;
+  background-image: none;
+  background-repeat: repeat-x;
+  box-shadow: none;
+  color: inherit;
+  text-shadow: none;
+}
+
+.fc-state-active {
+  background-color: $primary;
+  border-color: $primary;
+  color: $white;
+}
+
+.fc-center h2 {
+  font-weight: 400;
+  font-size:18px;
+  padding-top:10px;
+}
+
+.fc-widget-header .fc-day-header {
+  padding: 5px 0;
+  background:#f2f7f8;
+  font-weight:300;
+}
+
+.fc-ltr .fc-basic-view .fc-day-number {
+  text-align: center;
+}
+
+.fc-event, .fc-agenda .fc-event-time, .fc-event a {
+  padding: 4px 6px;
+  color: $white!important;
+}

@@ -1,0 +1,76 @@
+/* =============   Background Color	============= */
+
+.white-bg {
+  background: $white;
+}
+
+.bg-light {
+  background-color: $white !important;
+  border-color: $white;
+}
+
+.bg-gray {
+  background-color: $gray !important;
+  border-color: $gray !important;
+}
+
+.bg-primary {
+  color: $white!important;
+  background-color: $primary !important;
+  border-color: $primary !important;
+}
+
+.bg-blue {
+  background-color: $blue !important;
+  border-color: $blue !important;
+  color: $white!important;
+}
+
+.bg-success {
+  background-color: $success !important;
+  border-color: $success !important;
+  color: $white!important;
+}
+
+.bg-danger {
+  background-color: $danger !important;
+  border-color: $danger !important;
+  color: #fff;
+}
+
+.bg-info {
+  background-color: $info !important;
+  border-color: $info !important;
+  color: $white!important;
+}
+
+.bg-teal {
+  background-color: $teal !important;
+  border-color: $teal !important;
+  color: $white!important;
+}
+
+.bg-indigo {
+  background-color: $indigo !important;
+  border-color: $indigo !important;
+  color: $white!important;
+}
+
+.bg-warning {
+  background-color: $warning !important;
+  border-color: $warning !important;
+  color: $white!important;
+}
+
+.bg-muted {
+  background-color: $muted !important;
+  border-color: $muted !important;
+  color: $white!important;
+}
+
+.bg-dark {
+  background-color: $dark !important;
+  border-color: $dark !important;
+  color: $white!important;
+}
+

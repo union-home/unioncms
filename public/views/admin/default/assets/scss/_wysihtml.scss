@@ -1,0 +1,23 @@
+/* =============   wysihtml  ============= */
+
+.wysihtml5-toolbar > li > a:hover, .inbox-compose .wysihtml5-toolbar > li > div > a:hover {
+  background: #f1f1f1 !important;
+  border-color: #f1f1f1 !important;
+  border-radius: 0;
+}
+
+.wysihtml5-toolbar .dropdown.open .dropdown-toggle, ul.wysihtml5-toolbar a.btn.wysihtml5-command-active {
+  background: #eee !important;
+  box-shadow: none !important;
+}
+
+.wysihtml5-toolbar .btn {
+  color: #666;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
+  &:hover {
+    background: #eee !important;
+  }
+}

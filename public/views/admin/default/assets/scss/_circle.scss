@@ -1,0 +1,44 @@
+/* =============   Circle	============= */
+
+.circle {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 500px;
+  margin: 0 .5em;
+  vertical-align: baseline;
+  border: 2px solid transparent;
+}
+
+.circle-lg {
+  width: 11px;
+  height: 11px;
+}
+
+.circle-primary {
+  background: $primary;
+}
+
+.circle-success {
+  background: $success;
+}
+
+.circle-info {
+  background: $info;
+}
+
+.circle-warning {
+  background: $warning;
+}
+
+.circle-danger {
+  background: $danger;
+}
+
+.circle-teal {
+  background: $teal;
+}
+
+.circle-indigo {
+  background: $indigo;
+}

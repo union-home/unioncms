@@ -1,0 +1,70 @@
+/* =============   Modal  ============= */
+
+.modal-header {
+  padding: 10px 15px;
+  position: relative;
+  display: block;
+  span {
+    position: absolute;
+    top: -11px;
+    right: -14px;
+    display: block;
+    background: $primary;
+    border-radius: 22px;
+    color: #fff;
+    font-size: 14px;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+  }
+  .close {
+    opacity: 1;
+  }
+  .modal-title {
+    text-align: left;
+    text-transform: capitalize;
+    font-weight: 400;
+  }
+}
+
+.modal-content {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
+
+}
+
+.modal-dialog {
+  margin: 60px auto;
+}
+
+@media (min-width: 768px) {
+  .modal-form {
+    width: 500px;
+    margin: 0 auto;
+  }
+}
+
+#videoModal {
+  .modal-header {
+    border: 0px;
+  }
+  .modal-body {
+    padding: 0px;
+  }
+  .close {
+    position: absolute;
+    top: -11px;
+    right: -14px;
+    display: block;
+    text-align: center;
+    color: #fff;
+    z-index: 9;
+    opacity: 1;
+  }
+}

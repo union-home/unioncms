@@ -1,0 +1,16 @@
+/* =============   List	  ============= */
+
+.list-1 .list-group-item {
+  border: 0;
+  padding: 7px 0px;
+  border-top: 1px solid #eef5f9;
+  span{
+    font-weight:400;
+   i{
+   margin-right:10px;
+   }
+  }
+  &:first-child {
+    border-top: 0px;
+  }
+}

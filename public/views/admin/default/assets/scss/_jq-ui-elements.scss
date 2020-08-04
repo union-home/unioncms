@@ -1,0 +1,194 @@
+.avatar {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 100%;
+  background-color: #f5f6f7;
+  color: #929daf;
+  text-transform: uppercase;
+}
+
+.jquery-Ui-fieldset label {
+  display: block;
+}
+
+.ui-widget {
+  font-family: $font-secondary;
+}
+
+.ui-button {
+  background-color: transparent;
+}
+
+.ui-selectmenu-button.ui-button {
+  font-family: $font-secondary;
+  &:focus {
+    outline: 0 !important;
+  }
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active {
+  border: 1px solid $primary;
+  background: $primary;
+}
+
+.ui-button {
+  &:active, &.ui-state-active:hover {
+    border: 1px solid $primary;
+    background: $primary;
+  }
+}
+
+.ui-selectmenu-menu .ui-menu {
+  max-height: 250px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.ui-menu .ui-menu-item > .ui-menu-item-wrapper > span.fa {
+  margin-right: 7px;
+  float: left;
+  position: relative;
+  top: 6px;
+  font-size: 14px;
+}
+
+.ui-helper-reset {
+  border: 0;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ui-draggable-handle, .ui-sortable-handle {
+  -ms-touch-action: none;
+  touch-action: none;
+}
+
+.ui-tabs .ui-tabs-nav .ui-sortable-helper:not(.ui-tabs-active) .ui-tabs-anchor {
+  background-color: #fff;
+  border-bottom-color: #ddd;
+}
+
+.ui-sortable-helper {
+  top: inherit;
+}
+
+.ui-accordion .ui-accordion-header {
+  padding: 15px 20px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  &.ui-accordion-header-active {
+    background: $primary;
+  }
+  &:focus {
+    outline: 0 !important;
+  }
+}
+
+.ui-dialog {
+  z-index: 9999;
+}
+
+.ui-dialog-titlebar.ui-widget-header {
+  background: transparent;
+  border: 0px;
+  position: relative;
+  padding: 10px 15px 0;
+  .ui-button {
+    border: 0px;
+    background: transparent;
+  }
+}
+
+.ui-dialog .ui-dialog-content {
+  padding: 10px 15px;
+}
+
+.draggable-element {
+  width: 90px;
+  height: 90px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #fafafa;
+  border: 2px solid #ddd;
+  color: #777;
+  font-size: 12px;
+  vertical-align: middle;
+  margin: auto;
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+  text-align: center;
+  line-height: 90px;
+  margin-right: 15px;
+}
+
+.droppable-target-element {
+  width: 120px;
+  height: 120px;
+  z-index: 9;
+  background: $primary;
+  color: #fff;
+  border-color: $primary;
+}
+
+#selectable {
+  .ui-selecting {
+    background: $primary;
+  }
+  .ui-selected {
+    background: $primary;
+    color: white;
+  }
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  li {
+    margin: 3px;
+    padding: 0.4em;
+    height: auto;
+    display: block;
+  }
+}
+
+.ui-widget.ui-widget-content.ui-progressbar {
+  border: none !important;
+  height: 10px;
+  background: #f3f5f7;
+}
+
+.ui-sortable .sortable-title {
+  cursor: move;
+}
+
+.ui-sortable-placeholder {
+  border: 1px dashed #cecece !important;
+  visibility: visible !important;
+  background: #e7eaec;
+}
+
+.card.ui-sortable-placeholder {
+  margin: 0 0 23px !important;
+}
+
+.alertify .ajs-dialog {
+  border: 0px;
+}
+
+.ajs-button {
+  border: 0px;
+  &.ajs-ok {
+    background: $primary;
+    color: #fff;
+  }
+}

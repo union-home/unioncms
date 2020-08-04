@@ -1,0 +1,54 @@
+/* =============   Table   ============= */
+
+.table > {
+  tbody > tr {
+    > td {
+      padding: 15px;
+    }
+    &:nth-of-type(odd) {
+      background: #f2f4f8;
+    }
+    > {
+      td, th {
+        border: 1px solid #e9ecef;
+        vertical-align: inherit;
+      }
+    }
+  }
+  tfoot > tr > {
+    td, th {
+      border: 1px solid #e9ecef;
+      vertical-align: inherit;
+    }
+  }
+  thead > tr > {
+    td, th {
+      border: 1px solid #e9ecef;
+      vertical-align: inherit;
+    }
+  }
+  caption + thead > tr:first-child > {
+    td, th {
+      border-top: 1px solid #e9ecef;
+      padding: 15px;
+    }
+  }
+  colgroup + thead > tr:first-child > {
+    td, th {
+      border-top: 1px solid #e9ecef;
+      padding: 15px;
+    }
+  }
+  thead {
+    &:first-child > tr:first-child > {
+      td, th {
+        border-top: 1px solid #e9ecef;
+        padding: 15px;
+      }
+    }
+    > tr > th {
+      border: 1px solid #e9ecef;
+      vertical-align: bottom;
+    }
+  }
+}

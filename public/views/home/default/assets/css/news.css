@@ -1,0 +1,11 @@
+
+.banner{
+    height:340px;
+    background:url(../img/news-banner-bg.png) no-repeat center;
+}
+.nDetailed-title:hover{
+    color:#00b9c3;
+}
+.nDetailed-link:hover{
+    color:#00b9c3;
+}

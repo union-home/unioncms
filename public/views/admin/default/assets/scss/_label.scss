@@ -1,0 +1,44 @@
+/* =============   Label  ============= */
+
+.label {
+  font-weight: 400;
+  font-size: 10px;
+  display: inline;
+  vertical-align: middle;
+  padding: .26em .6em;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.label-primary {
+  background-color: $primary;
+}
+
+.label-danger {
+  background-color: $danger;
+}
+
+.label-warning {
+  background-color: $warning;
+}
+
+.label-info {
+  background-color: $info;
+}
+
+.label-success {
+  background-color: $success;
+}
+
+.label-default {
+  background-color: #dde6e9;
+  color: #333;
+}
+
+.label-indigo {
+  background-color: $indigo;
+}
+
+.label-teal {
+  background-color: $teal;
+}

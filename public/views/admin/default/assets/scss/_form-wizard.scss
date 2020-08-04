@@ -1,0 +1,79 @@
+/* =============   Form Wizard  ============= */
+
+.wizard > {
+  .content {
+    background: transparent;
+    display: block;
+    margin: 0px 0;
+    margin-top: 15px;
+    min-height: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+    font-family: $font-secondary;
+    > .body {
+      padding: 15px 0;
+      position: static;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      input, select, textarea {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .steps .current a {
+    background-color: $primary;
+    &:hover, &:active {
+      background-color: $primary;
+    }
+  }
+  .actions a {
+    background-color: $primary;
+    &:hover, &:active {
+      background-color: $primary;
+    }
+  }
+}
+
+.steps > ul > li:first-child a {
+  margin-left: 0 !important;
+}
+
+.wizard > {
+  .actions {
+    position: relative;
+    display: block;
+    text-align: right;
+    width: 100%;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+  }
+  .content > .body label.error {
+    color: $danger;
+    display: block;
+    margin-left: 0;
+  }
+  .steps .error a {
+    background-color: $danger;
+    &:hover, &:active {
+      background-color: $danger;
+    }
+  }
+  .content > .body {
+    input.error {
+      background: #fff;
+      border: 1px solid $danger;
+      color: #8a1f11;
+    }
+    label {
+      display: inline-block;
+      margin-bottom: 3px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "unionPay",
+  "author": "UnionCMS",
+  "version": "1.0.0",
+  "description": "unionPay在线支付",
+  "icon": "unionPay/icon.png",
+  "identification": "unionPay",
+  "wx_MCH": "",
+  "wx_KEY": "",
+  "wx_APP_ID": "",
+  "wx_APP_SECRET": "",
+  "wx_APP_TRADETYPE": "APP",
+  "wx_PUBLIC_APPID": "",
+  "wx_PUBLIC_APPSECRET": "",
+  "wx_PUBLIC_TRADETYPE": "JSAPI",
+  "wx_SMALL_APPID": "",
+  "wx_SMALL_APPSECRET": "",
+  "wx_SMALL_TRADETYPE": "JSAPI",
+  "ali_appid": "",
+  "ali_gateway": "https://openapi.alipay.com/gateway.do",
+  "ali_rsaPrivateKey": "",
+  "ali_alipayrsaPublicKey": ""
+}

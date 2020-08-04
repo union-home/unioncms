@@ -1,0 +1,160 @@
+.product{
+    overflow:hidden;
+}
+.setting ul>li{
+     display:none;
+ }
+.setting ul>li.active{
+    display:inline-block;
+}
+.setting-group{
+    position:relative;
+}
+.setting-group a:hover{
+    color:#8b9bb0;
+}
+.setting-group ul{
+    overflow-x:auto;
+    white-space:nowrap;
+}
+.setting-group .more{
+    position:absolute;
+    top:0;
+    right:0;
+    width:25px;
+    height:25px;
+    line-height:25px;
+    text-align:center;
+    background:#f7f9fb
+}
+
+.setting-group li{
+    position:relative;
+    cursor:pointer;
+}
+
+.setting-group li.active:after{
+    content:"";
+    display:block;
+    position:absolute;
+    bottom:-8px;
+    border-bottom:2px solid #0dc9d3;
+    width:100%;
+}
+.setting-header>span{
+    display:inline-block;
+    width:3px;
+    height:15px;
+    background:#0dc9d3;
+}
+
+.userinfo-content{
+    background:white;
+}
+.userinfo-group input:focus,.userinfo-group select:focus{
+    /*border:1px solid #0dc9d3;*/
+    outline-color:#0dc9d3;
+}
+.userinfo-text{
+    position:relative;
+    display:inline-block;
+    width:100px;
+}
+.userinfo-text span{
+    position:absolute;
+    top:3px;
+    left:-10px;
+    /*color:red;*/
+}
+.account{
+    width:38.2%
+}
+.modify{
+    /*width:60px;*/
+}
+.radion-icon{
+    cursor:pointer;
+}
+.radion-icon:before{
+    content:"";
+    display:inline-block;
+    width:13px;
+    height:13px;
+    border:1px solid #b8c5dd;
+    border-radius:50%;
+}
+.radion-icon.active{
+    background:url(../img/rodio-icon.png) no-repeat left;
+
+}
+.radion-icon.active:before{
+    border:none;
+}
+
+
+/*帐户安全*/
+.safety-group{
+    position:relative;
+    cursor:pointer;
+}
+.safety-group:hover{
+    box-shadow:0 0 10px 1px #e4e4e4;
+}
+.safety-group-img{
+    height:100px;
+}
+.safety-group-img img{
+    width:60px;
+}
+.safety-group-img .phone-icon{
+    width:40px;
+}
+.setting-btn{
+    border:1px solid #00b9c3;
+    color:#00b9c3;
+}
+.setting-btn:hover{
+    background:#00b9c3;
+    color:white;
+
+}
+
+.phone-btn{
+    border:1px solid #00b9c3;
+    color:#00b9c3;
+    width:47%;
+}
+.phone-btn:hover{
+    background:#00b9c3;
+    color:white;
+
+}
+.card-text{
+    height:42px;
+}
+
+.safety-group.isActive:before{
+    content:"";
+    display:block;
+    position:absolute;
+    right:0;
+    width:26px;
+    height:29px;
+    background:url(../img/angle-icon.png) no-repeat center;
+}
+.safety-group.active:before{
+    content:"";
+    display:block;
+    position:absolute;
+    right:0;
+    width:26px;
+    height:29px;
+    background:url(../img/angle-active-icon.png) no-repeat center;
+}
+
+
+/*留言版*/
+.message-group>textarea{
+    height:130px;
+    /*background:*/
+}

@@ -1,0 +1,45 @@
+/* =============   Text Color	============= */
+
+.text-light {
+  color: #fff !important;
+}
+
+.text-muted {
+  color: $muted !important;
+}
+
+.text-primary {
+  color: $primary !important;
+}
+
+.text-success {
+  color: $success !important;
+}
+
+.text-danger {
+  color: $danger !important;
+}
+
+.text-warning {
+  color: $warning !important;
+}
+
+.text-blue {
+  color: $blue !important;
+}
+
+.text-info {
+  color: $info !important;
+}
+
+.text-teal {
+  color: $teal !important;
+}
+
+.text-indigo {
+  color: $indigo !important;
+}
+
+a.text-muted:hover {
+  color: $primary !important;
+}

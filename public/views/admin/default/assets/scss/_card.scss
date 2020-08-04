@@ -1,0 +1,178 @@
+/* =============   Card	  ============= */
+
+.card {
+  margin-bottom: 30px;
+  -webkit-box-shadow: $card-shadow;
+  box-shadow: $card-shadow;
+  border-radius: 3px;
+  border:0px;
+  &.anime{
+    background-image: linear-gradient(to right, #6d8ad7, #657fda, #6174db, #6068db, #625ada);
+  }
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.card-header {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  padding: 20px 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 16px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom: none;
+  background:none;
+  display: table-cell;
+  &.anime{
+  border:none;
+  }
+  p {
+    font-size: 13px;
+    text-transform: none;
+    font-weight: normal;
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+.card-title{
+  font-size:18px;
+}
+
+.card-group .card {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.card-body {
+  position: relative;
+  padding:20px;
+}
+
+.card-search {
+  position: relative;
+  width: 170px;
+  float: right;
+  .form-control {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 300;
+  }
+  span {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    border: 0px;
+    font-size: 11px;
+  }
+}
+
+.card-footer {
+  padding: 10px 15px;
+  background: #fff;
+}
+
+.card-dropdown {
+	right: 0;
+	left: auto;
+}
+
+.card-primary {
+  border-color: $primary;
+  color: #fff;
+  background-color: $primary;
+  border-color: $primary;
+  a {
+    color: #fff;
+  }
+}
+
+.card-success {
+  border-color: $success;
+  color: #fff;
+  background-color: $success;
+  border-color: $success;
+  a {
+    color: #fff;
+  }
+}
+
+.card-info {
+  border-color: $info;
+  color: #fff;
+  background-color: $info;
+  border-color: $info;
+  a {
+    color: #fff;
+  }
+}
+
+.card-warning {
+  border-color: $warning;
+  color: #fff;
+  background-color: $warning;
+  border-color: $warning;
+  a {
+    color: #fff;
+  }
+}
+
+.card-danger {
+  border-color: $danger;
+  color: #fff;
+  background-color: $danger;
+  border-color: $danger;
+  a {
+    color: #fff;
+  }
+}
+
+.card-indigo {
+  border-color: $indigo;
+  color: #fff;
+  background-color: $indigo;
+  border-color: $indigo;
+  a {
+    color: #fff;
+  }
+}
+
+.card-teal {
+  border-color: $teal;
+  color: #fff;
+  background-color: $teal;
+  border-color: $teal;
+  a {
+    color: #fff;
+  }
+}

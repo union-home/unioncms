@@ -1,0 +1,38 @@
+/* =============	Toast	============= */
+
+.jq-icon-info {
+  background-color: $info;
+}
+
+.jq-icon-success {
+  background-color: $success;
+}
+
+.jq-icon-warning {
+  background-color: $warning;
+}
+
+.jq-icon-error {
+  background-color: $danger;
+}
+
+.close-jq-toast-single {
+  position: absolute;
+  top: 1px;
+  right: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.jq-toast-single {
+  border-radius: 0px;
+  font-family: $font-secondary;
+  h2 {
+    font-family: $font-secondary;
+  }
+}
+
+.jq-toast-loader {
+  height: 2px;
+  border-radius: 0px;
+}

@@ -1,0 +1,29 @@
+/* =============   Progress   ============= */
+
+.progress-info {
+  font-size: 13px;
+}
+
+.progress, .progress-bar {
+  border-radius: 3px;
+}
+
+.progress-mini {
+  height: 8px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  .progress-bar {
+    height: 8px; 
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+}
+
+.progress-xs {
+  height: 2px;
+  margin-bottom: 2px;
+  .progress-bar {
+    height: 2px;
+    margin-bottom: 2px;
+  }
+}
