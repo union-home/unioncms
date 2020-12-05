@@ -50,6 +50,19 @@
 
                                             <div class="form-group">
                                                 <label>
+                                                    {{--显示模块--}}
+                                                    {{getTranslateByKey("display_module")}}
+                                                </label>
+                                                <select name="display_module" class="form-control m-b">
+                                                    <option value="">{{getTranslateByKey("all_module")}}</option>
+                                                    @foreach($modules as $m)
+                                                        <option value="{{$m['identification']}}">{{$m['name']}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>
                                                     {{--请求端--}}
                                                     {{getTranslateByKey("req_type")}}
                                                 </label>
@@ -58,6 +71,25 @@
                                                         <option value="{{$key}}">{{$val}}</option>
                                                     @endforeach
                                                 </select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>
+                                                    {{--显示位置--}}
+                                                    {{getTranslateByKey("display_position")}}
+                                                </label>
+                                                <select name="display_position" class="form-control m-b">
+                                                    @foreach($displayPosition as $pkey => $p)
+                                                        <option value="{{$pkey}}">{{$p}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>
+                                                    {{--显示页面--}}
+                                                    {{getTranslateByKey("display_page")}}
+                                                </label>
+                                                <input type="text" class="form-control" name="display_page" placeholder=" {{getTranslateByKey("all_page")}}">
                                             </div>
                                             <div class="form-group ">
                                                 <label>

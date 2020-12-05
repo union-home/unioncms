@@ -67,7 +67,7 @@
                                             <div class="form-group ">
                                                 <label>{{getTranslateByKey("common_content")}}</label>
                                                 <input type="hidden" name="content" value="{{$page->content}}"  />
-                                                <div class="summernote">{{htmlspecialchars_decode(base64_decode($page->content))}}</div>
+                                                <div class="summernote">{!! htmlspecialchars_decode(base64_decode($page->content)) !!}</div>
                                             </div>
                                             <div class="form-group ">
                                                 <label>{{getTranslateByKey("common_seo_keywords")}}</label>

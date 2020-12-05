@@ -162,7 +162,7 @@ Route::group(['middleware' => ['CheckAdmin', 'checkIpBlacklist']], function () {
     Route::any('/pages/add', ["uses" => "PagesController@add", "permissions" => "pages/add"]);
 
     Route::any('/pages/edit/{id}', ["uses" => "PagesController@edit", "permissions" => "pages/edit"]);
-
+    Route::any('/pages/delete/{id}', ["uses" => "PagesController@delete", "permissions" => "pages/delete"]);
 
     Route::any('/pageSubmit', ["uses" => "PagesController@submit", "permissions" => "pageSubmit"]);
 
@@ -411,6 +411,13 @@ Route::group(['middleware' => ['CheckAdmin', 'checkIpBlacklist']], function () {
         Route::any('/edit', ["uses" => "BannerController@edit", "permissions" => "admin/banner/edit"]);
         Route::any('/delete/{id}', ["uses" => "BannerController@delete", "permissions" => "admin/banner/delete"]);
     });
+    //开屏广告管理
+    Route::group(["prefix" => "openAD"], function () {
+        Route::any('/', ["uses" => "OpenADController@index", "permissions" => "admin/openAD"]);
+        Route::any('/add', ["uses" => "OpenADController@add", "permissions" => "admin/openAD/add"]);
+        Route::any('/edit', ["uses" => "OpenADController@edit", "permissions" => "admin/openAD/edit"]);
+        Route::any('/delete/{id}', ["uses" => "OpenADController@delete", "permissions" => "admin/openAD/delete"]);
+    });
 
     //文章管理
     Route::group(["prefix" => "article"], function () {
@@ -435,4 +442,17 @@ Route::group(['middleware' => ['CheckAdmin', 'checkIpBlacklist']], function () {
 
     Route::any('/ArticleSubmit', ["uses" => "ArticleController@submit", "permissions" => "admin/ArticleSubmit"]);
 
+
+    //视频管理
+    Route::group(["prefix" => "video"], function () {
+        Route::any('/', ["uses" => "VideoController@index", "permissions" => "admin/video"]);
+        Route::any('/add', ["uses" => "VideoController@add", "permissions" => "admin/video/add"]);
+        Route::any('/edit/{id}', ["uses" => "VideoController@edit", "permissions" => "admin/video/edit"]);
+        Route::any('/delete/{id}', ["uses" => "VideoController@delete", "permissions" => "admin/video/delete"]);
+
+        Route::any('/category', ["uses" => "VideoController@category", "permissions" => "admin/video/category"]);
+        Route::any('/categoryAdd', ["uses" => "VideoController@categoryAdd", "permissions" => "admin/video/categoryAdd"]);
+        Route::any('/categoryEdit/{id?}', ["uses" => "VideoController@categoryEdit", "permissions" => "admin/video/categoryEdit"]);
+        Route::any('/categoryDelete/{id}', ["uses" => "VideoController@categoryDelete", "permissions" => "admin/video/categoryDelete"]);
+    });
 });

@@ -645,7 +645,7 @@
                                                                 @if($_template)
                                                                     @foreach($_template as $template)
                                                                         @if($key == 0)
-                                                                            
+
                                                                         @endif
                                                                     @endforeach
                                                                 @endif
@@ -655,6 +655,9 @@
                                                             <label class="col-sm-1 col-form-label">注册账户</label>
                                                             <div class="col-sm-4">
                                                                 <textarea class="form-control min-height-7-rem" placeholder="您的验证码为：{$code}" name="sms_register_template">{{$template_list['sms_register_template']['template_value']}}</textarea>
+                                                                <br>
+                                                                <input type="text" class="form-control" placeholder="注册模板id"
+                                                                       name="sms_register_template_id" value="{{$template_list['sms_register_template']['template_id']}}">
                                                             </div>
                                                             <div class="col-sm-4">
                                                                 <textarea class="form-control min-height-7-rem" placeholder="您的验证码为：{$code}" name="mail_register_template">{{$template_list['mail_register_template']['template_value']}}</textarea>
@@ -670,6 +673,9 @@
                                                             <label class="col-sm-1 col-form-label">找回密码</label>
                                                             <div class="col-sm-4">
                                                                 <textarea class="form-control min-height-7-rem" placeholder="您的验证码为：{$code}" name="sms_forgot_template">{{$template_list['sms_forgot_template']['template_value']}}</textarea>
+                                                                <br>
+                                                                <input type="text" class="form-control" placeholder="找回密码模板id"
+                                                                       name="sms_forgot_template_id" value="{{$template_list['sms_forgot_template']['template_id']}}">
                                                             </div>
                                                             <div class="col-sm-4">
                                                                 <textarea class="form-control min-height-7-rem" placeholder="您的验证码为：{$code}" name="mail_forgot_template">{{$template_list['mail_forgot_template']['template_value']}}</textarea>
@@ -685,6 +691,9 @@
                                                             <label class="col-sm-1 col-form-label">绑定账户</label>
                                                             <div class="col-sm-4">
                                                                 <textarea class="form-control min-height-7-rem" placeholder="您的验证码为：{$code}" name="sms_bind_template">{{$template_list['sms_bind_template']['template_value']}}</textarea>
+                                                                <br>
+                                                                <input type="text" class="form-control" placeholder="绑定模板id"
+                                                                       name="sms_bind_template_id" value="{{$template_list['sms_bind_template']['template_id']}}">
                                                             </div>
                                                             <div class="col-sm-4">
                                                                 <textarea class="form-control min-height-7-rem" placeholder="您的验证码为：{$code}" name="mail_bind_template">{{$template_list['mail_bind_template']['template_value']}}</textarea>
@@ -700,6 +709,9 @@
                                                             <label class="col-sm-1 col-form-label">解除绑定</label>
                                                             <div class="col-sm-4">
                                                                 <textarea class="form-control min-height-7-rem" placeholder="您的验证码为：{$code}" name="sms_untying_template">{{$template_list['sms_untying_template']['template_value']}}</textarea>
+                                                                <br>
+                                                                <input type="text" class="form-control" placeholder="解除模板id"
+                                                                       name="sms_untying_template_id" value="{{$template_list['sms_untying_template']['template_id']}}">
                                                             </div>
                                                             <div class="col-sm-4">
                                                                 <textarea class="form-control min-height-7-rem" placeholder="您的验证码为：{$code}" name="mail_untying_template">{{$template_list['mail_untying_template']['template_value']}}</textarea>
@@ -708,6 +720,42 @@
                                                                 <input type="checkbox" name="is_start[sms_untying_template]" value="1" @if($template_list['sms_untying_template']['is_start'] == 1) checked="checked" @endif> 短信
                                                                 <small style="color:green;margin-left:15px;">切记：{$code}为验证码</small><br>
                                                                 <input type="checkbox" name="is_start[mail_untying_template]" value="1" @if($template_list['mail_untying_template']['is_start'] == 1) checked="checked" @endif> 邮件
+                                                                <small style="color:green;margin-left:15px;">切记：{$code}为验证码</small>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="col-sm-1 col-form-label">登录</label>
+                                                            <div class="col-sm-4">
+                                                                <textarea class="form-control min-height-7-rem" placeholder="您的验证码为：{$code}" name="sms_login_template">{{$template_list['sms_login_template']['template_value']}}</textarea>
+                                                                <br>
+                                                                <input type="text" class="form-control" placeholder="登录模板id"
+                                                                       name="sms_login_template_id" value="{{$template_list['sms_login_template']['template_id']}}">
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <textarea class="form-control min-height-7-rem" placeholder="您的验证码为：{$code}" name="mail_login_template">{{$template_list['mail_login_template']['template_value']}}</textarea>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <input type="checkbox" name="is_start[sms_login_template]" value="1" @if($template_list['sms_login_template']['is_start'] == 1) checked="checked" @endif> 短信
+                                                                <small style="color:green;margin-left:15px;">切记：{$code}为验证码</small><br>
+                                                                <input type="checkbox" name="is_start[mail_login_template]" value="1" @if($template_list['mail_login_template']['is_start'] == 1) checked="checked" @endif> 邮件
+                                                                <small style="color:green;margin-left:15px;">切记：{$code}为验证码</small>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="col-sm-1 col-form-label">认证</label>
+                                                            <div class="col-sm-4">
+                                                                <textarea class="form-control min-height-7-rem" placeholder="您的验证码为：{$code}" name="sms_auth_template">{{$template_list['sms_auth_template']['template_value']}}</textarea>
+                                                                <br>
+                                                                <input type="text" class="form-control" placeholder="认证模板id"
+                                                                       name="sms_auth_template_id" value="{{$template_list['sms_auth_template']['template_id']}}">
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <textarea class="form-control min-height-7-rem" placeholder="您的验证码为：{$code}" name="mail_auth_template">{{$template_list['mail_auth_template']['template_value']}}</textarea>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <input type="checkbox" name="is_start[sms_auth_template]" value="1" @if($template_list['sms_auth_template']['is_start'] == 1) checked="checked" @endif> 短信
+                                                                <small style="color:green;margin-left:15px;">切记：{$code}为验证码</small><br>
+                                                                <input type="checkbox" name="is_start[mail_auth_template]" value="1" @if($template_list['mail_auth_template']['is_start'] == 1) checked="checked" @endif> 邮件
                                                                 <small style="color:green;margin-left:15px;">切记：{$code}为验证码</small>
                                                             </div>
                                                         </div>

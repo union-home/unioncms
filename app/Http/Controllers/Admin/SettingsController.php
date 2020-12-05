@@ -260,15 +260,20 @@ class SettingsController extends Controller
                         'sms_forgot_template',
                         'sms_bind_template',
                         'sms_untying_template',
+                        'sms_login_template',
+                        'sms_auth_template',
 
                         'mail_register_template',
                         'mail_forgot_template',
                         'mail_bind_template',
                         'mail_untying_template',
+                        'mail_login_template',
+                        'mail_auth_template',
                     ];
                     foreach ($all as $key => $value){
                         if(in_array($key, $in_database)){
                             $update_data['template_value'] = $value;
+                            $update_data['template_id'] = $all[$key . "_id"];
                             $update_data['is_start'] = (isset($all['is_start'][$key])) ? $all['is_start'][$key] : 0;
                             TemplateMessage::where('template_key', $key)->update($update_data);
                         }

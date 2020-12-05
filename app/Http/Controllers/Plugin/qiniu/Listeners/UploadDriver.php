@@ -30,8 +30,8 @@ class UploadDriver implements ListenterPlugins
 
 
         }else{
-
-                throw new \Exception("drive有误！",40000);
+                //多个上传会一起执行，所有不能断开返回
+                //throw new \Exception("drive有误！",40000);
 
         }
 

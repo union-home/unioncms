@@ -24,6 +24,9 @@ class Advertisement extends Model {
             'status' => 1,
             'create_at' => time(),
             'update_at' => time(),
+            'display_page' => $all['display_page'] ?: '',
+            'display_position' => $all['display_position'] ?: '',
+            'display_module' => $all['display_module'] ?: '',
         ]);
     }
 
@@ -39,6 +42,9 @@ class Advertisement extends Model {
             'is_company' => intval($all['is_company']),
             'status' => intval($all['status']) == 1 ? 1 : 2,
             'update_at' => time(),
+            'display_page' => $all['display_page'] ?: '',
+            'display_position' => $all['display_position'] ?: '',
+            'display_module' => $all['display_module'] ?: '',
         ];
         if ($all['images']) $up['images'] = $all['images'];
         return self::where('id', $all['id'])->update($up);

@@ -6,7 +6,6 @@ INSERT INTO `union_menus` VALUES (58, '广告列表', 'admin/advertisement', 'ad
 INSERT INTO `union_menus` VALUES (59, 'Banner列表', 'admin/banner', 'admin','57','2','css','','css',NULL, '', NULL,'1','2020-03-07 13:46:12','2020-03-07 13:46:12');
 INSERT INTO `union_menus` VALUES (60, '文章管理', 'admin/article', 'admin','41','2','css','','css',NULL, '', NULL,'1','2020-03-07 13:46:12','2020-03-07 13:46:12');
 
-DROP TABLE IF EXISTS `union_advertisement`;
 CREATE TABLE `union_advertisement` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id主键',
   `req_type` varchar(30) NOT NULL DEFAULT 'app' COMMENT 'small=小程序，public=公众号，pc=PC端，app=APP端',
@@ -23,7 +22,6 @@ CREATE TABLE `union_advertisement` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='广告表';
 
 
-DROP TABLE IF EXISTS `union_banner`;
 CREATE TABLE `union_banner` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id主键',
   `req_type` varchar(30) NOT NULL DEFAULT 'app' COMMENT 'small=小程序，public=公众号，pc=PC端，app=APP端',
@@ -39,7 +37,6 @@ CREATE TABLE `union_banner` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='广告表';
 
-DROP TABLE IF EXISTS `union_article`;
 CREATE TABLE `union_article` (
     `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自动增长ID',
     `title` varchar(255) DEFAULT '' COMMENT '标题',
@@ -60,7 +57,6 @@ CREATE TABLE `union_article` (
     KEY `is_rec` (`is_rec`) USING BTREE
   ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='文章表';
 
-  DROP TABLE IF EXISTS `union_article_category`;
   CREATE TABLE `union_article_category` (
       `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
       `name` varchar(255) DEFAULT '' COMMENT '分类名称',

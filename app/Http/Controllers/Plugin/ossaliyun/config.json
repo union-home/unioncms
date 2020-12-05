@@ -1,0 +1,16 @@
+{
+  "name":"阿里云",
+  "author":"UnionCMS",
+  "version":"1.0",
+  "description":"阿里云",
+  "icon":"ossaliyun/icon.png",
+  "identification":"ossaliyun",
+  "Access_Key":"",
+  "ossaliyun_domain":"http://oss-cn-shenzhen.aliyuncs.com",
+  "ossaliyun_https_domain":"",
+  "ossaliyun_custom_domain":"",
+  "ossaliyun_access_key":"",
+  "ossaliyun_secret_key":"",
+  "ossaliyun_bucket":"",
+  "ossaliyun_notify_url":""
+}

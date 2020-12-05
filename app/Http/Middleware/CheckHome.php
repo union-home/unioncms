@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use App\Models\Member;
 use Closure;
+use Illuminate\Support\Facades\Cache;
 
 class CheckHome
 {

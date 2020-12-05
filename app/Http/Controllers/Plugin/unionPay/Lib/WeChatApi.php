@@ -33,6 +33,8 @@ class WeChatApi {
     //方法
     protected $action = '';
 
+    public $params = [];
+
     //公众号资料
     //protected $JSAPIAPPID = '';
     //protected $JSAPIAPPSECRET = '';
@@ -80,7 +82,12 @@ class WeChatApi {
     }
 
     public function order() {
-        return TransferOrder::InsertArr(['order_num' => $this->outTradeNo, 'module' => $this->module, 'action' => $this->action, 'pay_method' => 'WeChat']);
+        $res = TransferOrder::InsertArr(['order_num' => $this->outTradeNo, 'module' => $this->module, 'child_module' => $this->params['child_module'], 'action' => $this->action, 'pay_method' => 'WeChat']);
+        if ($res) {
+            return ['status' => 200, 'msg' => '中转下单成功'];
+        } else {
+            return ['status' => 0, 'msg' => '中转下单失败'];
+        }
     }
 
     //对微信统一下单接口返回的支付相关数据进行处理

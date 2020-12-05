@@ -47,7 +47,19 @@
                                     <div class="card-body">
                                         <form method="post" action="" id="post_form" enctype="multipart/form-data">
                                             {{csrf_field()}}
-
+                                            <div class="form-group">
+                                                <label>
+                                                    {{--显示模块--}}
+                                                    {{getTranslateByKey("display_module")}}
+                                                </label>
+                                                <select name="display_module" class="form-control m-b">
+                                                    <option value="">{{getTranslateByKey("all_module")}}</option>
+                                                    @foreach($modules as $m)
+                                                        <option value="{{$m['identification']}}"
+                                                                @if($data['display_module']==$m['identification']) selected @endif>{{$m['name']}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
                                             <div class="form-group">
                                                 <label>
                                                     {{--请求端--}}
@@ -60,6 +72,28 @@
                                                     @endforeach
                                                 </select>
                                             </div>
+
+                                            <div class="form-group">
+                                                <label>
+                                                    {{--显示位置--}}
+                                                    {{getTranslateByKey("display_position")}}
+                                                </label>
+                                                <select name="display_position" class="form-control m-b">
+                                                    @foreach($displayPosition as $key => $val)
+                                                        <option value="{{$key}}"
+                                                                @if($key==$data['display_position']) selected @endif>{{$val}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>
+                                                    {{--显示页面--}}
+                                                    {{getTranslateByKey("display_page")}}
+                                                </label>
+                                                <input type="text" class="form-control" name="display_page"
+                                                value="{{$data['display_page']}}">
+                                            </div>
+
                                             <div class="form-group ">
                                                 <label>
                                                     {{--图片--}}
@@ -68,7 +102,8 @@
                                                 <div class="fileinput-new" data-provides="fileinput">
                                                     <div class="fileinput-preview" data-trigger="fileinput"
                                                          style="width: 150px; height:150px;">
-                                                        <img class="img-fluid" src="{{GetUrlByPath($data['images'])}}" alt="">
+                                                        <img class="img-fluid" src="{{GetUrlByPath($data['images'])}}"
+                                                             alt="">
                                                     </div>
                                                     <span class="btn btn-primary  btn-file">
                                                         <span class="fileinput-new">
@@ -89,6 +124,7 @@
                                                     </a>
                                                 </div>
                                             </div>
+
                                             <div class="form-group ">
                                                 <label>
                                                     {{--广告类型--}}

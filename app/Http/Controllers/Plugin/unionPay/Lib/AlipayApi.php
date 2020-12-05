@@ -19,7 +19,7 @@ class AlipayApi {
     protected $module = '';//模块
     protected $action = '';//方法
     public $alipayrsaPublicKey = '';//支付宝公钥
-
+    public $params = [];
 
     //支付宝支付类的构造函数
     function __construct() {
@@ -85,7 +85,12 @@ class AlipayApi {
     }
 
     public function order() {
-        return TransferOrder::InsertArr(['order_num' => $this->outTradeNo, 'module' => $this->module, 'action' => $this->action, 'pay_method' => 'Alipay']);
+        $res = TransferOrder::InsertArr(['order_num' => $this->outTradeNo, 'module' => $this->module, 'child_module' => $this->params['child_module'] ?: '', 'action' => $this->action, 'pay_method' => 'Alipay']);
+        if ($res) {
+            return ['status' => 200, 'msg' => '中转下单成功'];
+        } else {
+            return ['status' => 0, 'msg' => '中转下单失败'];
+        }
     }
 
     public function check($outTradeNo) {

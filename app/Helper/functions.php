@@ -219,7 +219,7 @@ function UploadFile($request,
         default :
 
             //判断插件是否存在
-            if (is_dir(PLUGIN_PATH . __E("upload_driver"))) {
+            if (is_dir(PLUGIN_PATH_FILE . __E("upload_driver"))) {
 
                 //触发上传驱动事件
 
@@ -982,16 +982,16 @@ if (!function_exists('del_dir_files')) {
      * @param int $delete_dir 是否删除文件夹【1.删除；0.不删除】
      */
     function del_dir_files($dirName, $delete_dir = 1) {
-        if ($handle = @opendir($dirName)) {
-            while (false !== ($item = @readdir($handle))) {
-                if ($item != '.' && $item != '..') {
-                    if (is_dir($dirName . '/' . $item)) del_dir_files($dirName . '/' . $item);
-                    else @unlink($dirName . '/' . $item);
-                }
-            }
-            @closedir($handle);
-        }
-        if ($delete_dir == 1) @rmdir($dirName);
+//        if ($handle = @opendir($dirName)) {
+//            while (false !== ($item = @readdir($handle))) {
+//                if ($item != '.' && $item != '..') {
+//                    if (is_dir($dirName . '/' . $item)) del_dir_files($dirName . '/' . $item);
+//                    else @unlink($dirName . '/' . $item);
+//                }
+//            }
+//            @closedir($handle);
+//        }
+//        if ($delete_dir == 1) @rmdir($dirName);
     }
 }
 

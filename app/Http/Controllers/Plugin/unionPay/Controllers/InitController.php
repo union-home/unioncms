@@ -143,6 +143,72 @@ class InitController extends Controller {
         }
         $clapi->codeGetWeChatInfo($event->callback_data);
     }
+
+    //退款
+    public static function refund($event) {
+        $config = json_decode(file_get_contents(dirname(__DIR__) . '/config.json'), true);
+        if ($event->pay_method == 'WeChat') {
+            $clapi = new WeChatApi();
+            /*if ($event->pay_type == 'small') {
+                $clapi->setConfig('APPID', $config['wx_SMALL_APPID']);
+            } else {
+                $clapi->setConfig('APPID', $config['wx_PUBLIC_APPID']);
+            }*/
+            $clapi->setConfig('APPID', $config['wx_PUBLIC_APPID']);
+            $clapi->setConfig('MCHID', $config['wx_MCH']);
+            $clapi->setConfig('KEY', $config['wx_KEY']);
+            $clapi->setConfig('outTradeNo', $event->outTradeNo);
+            $clapi->setConfig('totalFee', $event->totalFee * 100);
+            $clapi->setConfig('module', $event->module);
+            $clapi->setConfig('action', $event->action);
+            $clapi->setConfig('outTradeNoOld', $event->callback_data['old_order_num']);
+            $clapi->setConfig('totalFeeOld', $event->callback_data['old_price'] * 100);
+            return $clapi->refund();
+        } elseif ($event->pay_method == 'Alipay') {
+            $clapi = new AlipayApi();
+            $clapi->setConfig('appid', $config['ali_appid']);
+            $clapi->setConfig('gateway', $config['ali_gateway']);
+            $clapi->setConfig('rsaPrivateKey', $config['ali_rsaPrivateKey']);
+            $clapi->setConfig('alipayrsaPublicKey', $config['ali_alipayrsaPublicKey']);
+            $clapi->setConfig('outTradeNo', $event->outTradeNo);
+            $clapi->setConfig('totalFee', $event->totalFee);
+            $clapi->setConfig('module', $event->module);
+            $clapi->setConfig('action', $event->action);
+            $clapi->setConfig('outTradeNoOld', $event->callback_data['old_order_num']);
+            $clapi->setConfig('totalFeeOld', $event->callback_data['old_price']);
+            return $clapi->refund();
+        }
+    }
+
+    //查询退款
+    public static function checkRefund($event) {
+        $config = json_decode(file_get_contents(dirname(__DIR__) . '/config.json'), true);
+        if ($event->pay_method == 'WeChat') {
+            $clapi = new WeChatApi();
+            $clapi->setConfig('APPID', $config['wx_PUBLIC_APPID']);
+            $clapi->setConfig('MCHID', $config['wx_MCH']);
+            $clapi->setConfig('KEY', $config['wx_KEY']);
+            $clapi->setConfig('outTradeNo', $event->outTradeNo);
+            $clapi->setConfig('totalFee', $event->totalFee * 100);
+            $clapi->setConfig('module', $event->module);
+            $clapi->setConfig('action', $event->action);
+            $clapi->setConfig('outTradeNoOld', $event->callback_data['old_order_num']);
+            $clapi->setConfig('totalFeeOld', $event->callback_data['old_price'] * 100);
+            return $clapi->checkRefund();
+        } elseif ($event->pay_method == 'Alipay') {
+            $clapi = new AlipayApi();
+            $clapi->setConfig('appid', $config['ali_appid']);
+            $clapi->setConfig('gateway', $config['ali_gateway']);
+            $clapi->setConfig('rsaPrivateKey', $config['ali_rsaPrivateKey']);
+            $clapi->setConfig('alipayrsaPublicKey', $config['ali_alipayrsaPublicKey']);
+            $clapi->setConfig('outTradeNo', $event->outTradeNo);
+            $clapi->setConfig('totalFee', $event->totalFee);
+            $clapi->setConfig('module', $event->module);
+            $clapi->setConfig('action', $event->action);
+            $clapi->setConfig('outTradeNoOld', $event->callback_data['old_order_num']);
+            return $clapi->checkRefund();
+        }
+    }
 }
 
 

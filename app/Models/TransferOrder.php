@@ -32,6 +32,7 @@ class TransferOrder extends Model {
 
         $add['order_num'] = $params['order_num'];
         $add['module'] = $params['module'];
+        $add['child_module'] = $params['child_module'];
         $add['action'] = $params['action'];
         $add['pay_method'] = $params['pay_method'];
         $add['create_at'] = date("Y-m-d H:i:s");
@@ -43,7 +44,7 @@ class TransferOrder extends Model {
 
     //获取数据
     static function getOrder($order_num) {
-        $res = self::where('order_num', $order_num)->first();
+        $res = self::where('order_num', $order_num)->orderByDesc('create_at')->first();
         return $res ? $res->toArray() : [];
     }
 }

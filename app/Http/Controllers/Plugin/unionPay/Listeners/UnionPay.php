@@ -39,7 +39,11 @@ class UnionPay implements ListenterPlugins {
                 //支付宝code
 //                return InitController::aliPayCode($event);
             }
-        }else {
+        } elseif ($event->req_type == "refund") {
+            return InitController::refund($event);
+        } elseif ($event->req_type == "checkRefund") {
+            return InitController::checkRefund($event);
+        } else {
             //throw new \Exception("drive有误！",40000);
             // 事件会所有执行，所以不能打回错误
         }

@@ -28,10 +28,10 @@
                 <div class="row clearfix">
                     <div class="col-md-6 col-12 d-flex align-items-center pull-left">
                         <div class="detailed-item">
-                            <div class="detailed-img">
+                            <div class="detailed-img position-relative">
                                 <img class="w-100" src="{{HOME_ASSET}}assets/img/product-img.png" alt="">
-                                <div class="position-absolute">
-                                    <img class="w-100" src="{{GetUrlByPath($data->cover)}}" alt="">
+                                <div class="position-absolute" style="top:0;bottom:18%;margin:.6rem;right:0;left:0;">
+                                    <img class="w-100 h-100" src="{{GetUrlByPath($data->cover)}}" alt="">
                                 </div>
                             </div>
                         </div>

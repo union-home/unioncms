@@ -164,7 +164,7 @@
 <!-- Common Plugins -->
 @include('admin/default/js',['load'=> ["custom"]])
 
-<script src="//unpkg.com/wangeditor/release/wangEditor.min.js"></script>
+<script type="text/javascript" src="{{ADMIN_ASSET}}assets/js/wangEditor.min.js"></script>
 
 </body>
 <style>

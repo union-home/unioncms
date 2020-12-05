@@ -67,7 +67,10 @@
                                             <thead>
                                             <tr>
 
+                                                <th>{{getTranslateByKey("display_module")}}</th>
                                                 <th>{{getTranslateByKey("req_type")}}</th>
+                                                <th>{{getTranslateByKey("display_page")}}</th>
+                                                <th>{{getTranslateByKey("display_position")}}</th>
                                                 <th>{{getTranslateByKey("common_image")}}</th>
                                                 <th>{{getTranslateByKey("advertising_type")}}</th>
                                                 <th>{{getTranslateByKey("is_it_self_run")}}</th>
@@ -83,7 +86,16 @@
                                             @foreach($ad as $value)
                                                 <tr>
 
+                                                    <td>
+                                                        @if($value->modules_name)
+                                                            {{$value->modules_name}}
+                                                        @else
+                                                            {{getTranslateByKey("all_module")}}
+                                                        @endif
+                                                    </td>
                                                     <td>{{getReqType()[$value->req_type]}}</td>
+                                                    <td>{{$value->display_page}}</td>
+                                                    <td>{{$displayPosition[$value->display_position]}}</td>
                                                     <td>
                                                         <img src="{{GetUrlByPath($value->images)}}" alt="" width="100">
                                                     </td>

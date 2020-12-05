@@ -4,13 +4,32 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Advertisement;
 use App\Http\Controllers\Controller;
+use App\Models\Modules;
 
 class AdvertisementController extends Controller {
     //列表
     function index() {
-        $ad = Advertisement::orderBy('create_at', 'desc')
+        $ad = Advertisement::leftJoin('modules','modules.identification','=','advertisement.display_module')
+            ->orderBy('advertisement.create_at', 'desc')
+            ->select([
+                'advertisement.*',
+                'modules.name as modules_name',
+            ])
             ->paginate(__E('admin_page_count'));
-        return view("admin/" . ADMIN_SKIN . "/advertisement/index", ["ad" => $ad, 'params' => $params]);
+        $displayPosition = self::getDisplayPosition();
+        return view("admin/" . ADMIN_SKIN . "/advertisement/index", [
+            "ad" => $ad,
+            'displayPosition' => $displayPosition
+        ]);
+    }
+
+    //获取显示位置
+    public static function getDisplayPosition() {
+        return [
+            'top' => '上',
+            'center' => '中',
+            'bottom' => '下',
+        ];
     }
 
     //添加
@@ -28,7 +47,12 @@ class AdvertisementController extends Controller {
                 return ['status' => 0, 'msg' => '添加失败'];
             }
         } else {
-            return view("admin/" . ADMIN_SKIN . "/advertisement/add", []);
+            $displayPosition = self::getDisplayPosition();
+            $modules = Modules::where(['status' => 1, 'cloud_type' => 0])->get()->toarray();
+            return view("admin/" . ADMIN_SKIN . "/advertisement/add", [
+                'displayPosition' => $displayPosition,
+                'modules' => $modules,
+            ]);
         }
     }
 
@@ -56,7 +80,13 @@ class AdvertisementController extends Controller {
         } else {
             $data = Advertisement::find($post['id']);
             if (!$data) return back()->with("errormsg", "数据不存在！");
-            return view("admin/" . ADMIN_SKIN . "/advertisement/edit", ["data" => $data]);
+            $displayPosition = self::getDisplayPosition();
+            $modules = Modules::where(['status' => 1, 'cloud_type' => 0])->get()->toarray();
+            return view("admin/" . ADMIN_SKIN . "/advertisement/edit", [
+                "data" => $data,
+                'displayPosition' => $displayPosition,
+                'modules' => $modules,
+            ]);
         }
     }
 

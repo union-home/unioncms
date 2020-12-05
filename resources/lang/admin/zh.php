@@ -243,4 +243,12 @@ return array(
     'banner_list' => 'banner列表',
     'banner_add' => 'banner添加',
     'banner_edit' => 'banner编辑',
+    'all_module' => '所有模块',
+    'display_module' => '显示模块',
+    'display_position' => '显示位置',
+    'all_page' => '所有页面',
+    'display_page' => '显示页面',
+    'display_left' => '上',
+    'display_center' => '中',
+    'display_bottom' => '下',
 );

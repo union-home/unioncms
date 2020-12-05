@@ -38,7 +38,22 @@ class PagesController extends Controller
 
     }
 
+    //删除
+    function delete($id) {
+        if ($id < 3) return back()->with("errormsg", "不能删除");
+        $data = Pages::find($id);
 
+        if (!$data) {
+            return back()->with("errormsg", "数据不存在！");
+        }
+
+        if (Pages::destroy($id)) {
+            return back()->with("successmsg", "删除成功！");
+        }
+
+        return back()->with("errormsg", "删除失败！");
+
+    }
 
 
 

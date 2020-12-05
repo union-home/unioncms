@@ -11,8 +11,7 @@ use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
 
-class SendSMSDriver
-{
+class SendSMSDriver {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     /**
@@ -22,13 +21,13 @@ class SendSMSDriver
      *
      * $type = template,content
      */
-    public function __construct($request, $drive, $type="template", $tophone, $template, $content)
-    {
+    public function __construct($request, $drive, $type = "template", $tophone, $template, $content, $params = []) {
         $this->request = $request;
         $this->drive = $drive;
         $this->type = $type;
         $this->tophone = $tophone;
         $this->template = $template;
+        $this->params = $params;
         $this->content = $content;
     }
 
@@ -37,8 +36,7 @@ class SendSMSDriver
      *
      * @return Channel|array
      */
-    public function broadcastOn()
-    {
+    public function broadcastOn() {
         return new PrivateChannel('channel-name');
     }
 }

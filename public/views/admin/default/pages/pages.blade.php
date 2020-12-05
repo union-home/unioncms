@@ -122,6 +122,27 @@
 
 <!-- Common Plugins -->
 @include('admin/default/js',['load'=> ["custom"]])
-
+<script>
+    function delData(id) {
+        $.confirm({
+            title: '{{getTranslateByKey("common_tip")}}',
+            content: '{{getTranslateByKey("common_sure_to_delete")}}',
+            type: 'default',
+            buttons: {
+                ok: {
+                    text: "{{getTranslateByKey('common_ensure')}}",
+                    btnClass: 'btn-primary',
+                    keys: ['enter'],
+                    action: function(){
+                        location.href= "{{url('/admin/pages/delete')}}"+"/"+id
+                    }
+                },
+                cancel: {
+                    text: "{{getTranslateByKey('common_cancel')}}"
+                }
+            }
+        });
+    }
+</script>
 </body>
 </html>
