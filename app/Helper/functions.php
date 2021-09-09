@@ -201,6 +201,7 @@ function UploadFile($request,
         $file = $request->file($field);
         //获取文件的扩展名
         $ext = $file->getClientOriginalExtension();
+        $ext = strtolower($ext);
         //过滤文件格式
         if (!in_array($ext, explode(",", $allowExt))) {
             throw new Exception("文件格式不允许！", 40000);
@@ -373,6 +374,8 @@ function GetLocalFileByPath($path) {
 
 //获取驱动的URL
 function GetUrlByPath($path) {
+    if (!$path) return $path;
+    if (strpos($path, 'http') !== false) return $path;
     $data = \App\Models\Attachments::getByPath($path);
     if ($data) {
         switch ($data["drive"]) {
@@ -1514,5 +1517,61 @@ function getReqType() {
         'small' => '小程序',
         'public' => '公众号',
         'pc' => 'PC端',
+    ];
+}
+
+
+function getDisplayPosition() {
+    return [
+        [
+            'left-top' => '左上',
+            'top' => '上',
+            'right-top' => '右上',
+        ],
+        [
+            'left-center' => '左中',
+            'center' => '中',
+            'right-center' => '右中',
+        ],
+        [
+            'left-bottom' => '左下',
+            'bottom' => '下',
+            'right-bottom' => '右下',
+        ]
+    ];
+}
+
+function getDisplayPositionMsg($tig) {
+    $info = getDisplayPosition();
+    return $info[0][$tig] ?: ($info[1][$tig] ?: $info[2][$tig]);
+}
+
+function getFileType($url) {
+    $one = explode('?', $url);
+    $two = explode('.', $one[0]);
+    $fix = strtolower($two[count($two) - 1]);
+    if (in_array($fix, ['mp4', 'avi', ''])) {
+        return '视频';
+    } elseif (in_array($fix, ['png', 'jpeg', 'jpg', 'gif'])) {
+        return '图片';
+    } else {
+        return '其他';
+    }
+
+}
+
+//条数
+function limit() {
+    $len = intval($_REQUEST['pagesize']);
+    $page = intval($_REQUEST['page']);
+    if ($len <= 0) $len = 10;
+    if ($page < 1) $page = 1;
+    $offset = ($page - 1) * $len;
+    //偏移量，条数
+    return [
+        0 => $offset,
+        1 => $len,
+        'skip' => $offset,
+        'take' => $len,
     ];
 }
