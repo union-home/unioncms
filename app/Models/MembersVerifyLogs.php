@@ -29,8 +29,9 @@ class MembersVerifyLogs extends Model {
             'bind_type' => $bind_type //绑定类型【1.绑定；0.解绑】
         ];
         if (!empty($verify_receive)) $where['verify_receive'] = $verify_receive;
-        return self::where($where)
+        return self::query()->where($where)
             ->where('enddate_at', '>=', date('Y-m-d H:i:s'))
+            ->latest()
             ->first();
     }
 

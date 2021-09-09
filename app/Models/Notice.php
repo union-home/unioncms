@@ -105,4 +105,29 @@ class Notice extends Model {
 
     }
 
+
+    //获取Notice
+    public static function getNoticeList($all) {
+        $limit = limit();
+        $res = self::query()->orderByDesc('create_at')
+            ->skip($limit['skip'])->take($limit['take'])
+            ->get(['id', 'title', 'content', 'create_at'])
+            ->toArray();
+        //过滤内容html
+        foreach ($res as &$val){
+            $val['content'] = strip_tags($val['content']);
+        }
+        return $res;
+    }
+
+    //详情获取Notice
+    public static function detailGetNoticeList($id) {
+        $res = self::query()
+            ->where('id', '<>', $id)
+            ->orderByDesc('create_at')
+            ->take(6)
+            ->get(['id', 'title', 'content', 'create_at'])
+            ->toArray();
+        return $res;
+    }
 }

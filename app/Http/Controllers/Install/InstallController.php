@@ -14,7 +14,7 @@ class InstallController extends Controller
 {
 
 
-      static  private $dataPath = __DIR__."/data/unioncms.sql";
+    static  private $dataPath = __DIR__."/data/unioncms.sql";
 
     /**
      * Create a new controller instance.
@@ -32,7 +32,7 @@ class InstallController extends Controller
         view()->share([
             'cms_name' => 'UnionCMS',
             'cms_url' => 'http://www.unioncms.cn',
-            ]);
+        ]);
     }
 
     public static function checkInstall()
@@ -204,7 +204,7 @@ class InstallController extends Controller
                     'website_name',
                     'website_keys',
                     'website_desc',
-                    ];
+                ];
                 foreach ($params as $key => $value){
                     if(in_array($key,$in_database)){
                         if($key=='website_reg_rqstd'){
@@ -300,8 +300,9 @@ class InstallController extends Controller
          * 现在的处理方式：把 ‘地区表’ 拆出一个SQL文件，让会员手动导入，量太大了【并且删除了测试数据，尽量只新增表，数据不做新增，要不然不建议使用下面这种方式】
          */
 
+
         $result = self::sp_execute_sql($conf, $sqlToExec, $sqlIndex);
-        if (!empty($result['error'])) {
+        if ($result['error']) {
             $installError = session('install.error');
             $installError = empty($installError) ? 0 : $installError;
 
@@ -337,7 +338,7 @@ class InstallController extends Controller
                 //     if (!in_array($v, $tables_name)) $tables_name[] = $v;
                 // }
             }
-        }else throw new \Exception("数据库SQL文件丢失！", 1);   
+        }else throw new \Exception("数据库SQL文件丢失！", 1);
     }
 
     public function setDbConfig()
@@ -371,7 +372,7 @@ class InstallController extends Controller
         } catch (\Exception $e) {
             return ['msg' => "网站创建失败!" . $e->getMessage(), 'status' => 40000];
         }
-        return ['msg' => '网站创建完成!【请手动导入根目录 ‘unioncms - area’ 地区表，数据量太大】', 'status' => 200];
+        return ['msg' => '网站创建完成!', 'status' => 200];
     }
 
     /**
@@ -395,11 +396,19 @@ class InstallController extends Controller
             $table_name = $matches[1];
             $msg        = "创建数据表".$table_name;
             try {
-                mysqli_query($db, $sql);
-                return [
-                    'error'   => 0,
-                    'message' => $msg . ' 成功！'
-                ];
+
+                if(mysqli_query($db, $sql)){
+                    return [
+                        'error'   => 0,
+                        'message' => $msg . ' 成功！'
+                    ];
+                }else{
+                    return [
+                        'error'   => 1,
+                        'message' => $msg." 失败!"
+                    ];
+                }
+
             } catch (\Exception $e) {
                 return [
                     'error'     => 1,
@@ -409,7 +418,7 @@ class InstallController extends Controller
             }
 
         } else {
-            $msg = '执行成功!';
+
             if (preg_match('/((INSERT\\s+?INTO))[\\s`]+?(\\w+)[\\s`]+?/is', $sql, $table_name)) {
                 $msg = '数据表' . array_pop($table_name) . '录入数据……';
             }else if (preg_match('/((Table structure for))[\\s`]+?(\\w+)[\\s`]+?/is', $sql, $table_name)) {
@@ -419,17 +428,26 @@ class InstallController extends Controller
             }else if (preg_match('/((-- Records of))[\\s`]+?(\\w+)[\\s`]+?/is', $sql, $table_name)) {
                 $msg = '数据表' . array_pop($table_name) . '录入数据……';
             }else{
+                $msg = '执行';
             }
             try {
-                mysqli_query($db, $sql);
-                return [
-                    'error'   => 0,
-                    'message' => 'SQL' . $msg
-                ];
+
+                if(mysqli_query($db, $sql)){
+                    return [
+                        'error'   => 0,
+                        'message' => 'SQL ' . $msg." 成功!"
+                    ];
+                }else{
+                    return [
+                        'error'   => 1,
+                        'message' => "SQL ".$msg." 失败!"
+                    ];
+                }
+
             } catch (\Exception $e) {
                 return [
                     'error'     => 1,
-                    'message'   => 'SQL' . $msg . '执行失败！',
+                    'message'   => 'SQL执行失败！',
                     'exception' => $e->getTraceAsString()
                 ];
             }

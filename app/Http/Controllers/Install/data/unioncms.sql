@@ -675,7 +675,7 @@ CREATE TABLE `union_product_category`  (
   `icon` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT 'Icon 路径',
   `pid_path` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '上级路径',
   `classify_grade` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '分类等级',
-  `pid` int(11) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '上级id',
+  "pid" int(11) DEFAULT NULL,
   `create_at` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '创建时间',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '产品分类表' ROW_FORMAT = Compact;
@@ -913,6 +913,7 @@ CREATE TABLE `union_article` (
       PRIMARY KEY (`id`) USING BTREE
     ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='文章分类表';
 
+  DROP TABLE IF EXISTS `union_open_ad`;
   CREATE TABLE `union_open_ad` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id主键',
   `app_type` tinyint(1) NOT NULL DEFAULT '1' COMMENT '【1=用户端，2=商家端】',
@@ -963,6 +964,7 @@ ALTER TABLE `union_product` CHANGE `create_at` `create_at` DATETIME NULL DEFAULT
 ALTER TABLE `union_product_category` CHANGE `create_at` `create_at` DATETIME NULL DEFAULT NULL COMMENT '创建时间';
 ALTER TABLE `union_system_message` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL COMMENT '创建时间';
 ALTER TABLE `union_themes` CHANGE `create_at` `create_at` DATETIME NULL DEFAULT NULL COMMENT '创建时间';
+DROP TABLE IF EXISTS `union_video`;
 CREATE TABLE `union_video` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自动增长ID',
   `type` varchar(50) CHARACTER SET utf8 DEFAULT '' COMMENT '类型',
@@ -979,7 +981,7 @@ CREATE TABLE `union_video` (
   KEY `is_hot` (`is_hot`) USING BTREE,
   KEY `is_rec` (`is_rec`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='视频表';
-
+DROP TABLE IF EXISTS `union_video_category`;
 CREATE TABLE `union_video_category` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `name` varchar(255) DEFAULT '' COMMENT '分类名称',
@@ -996,7 +998,8 @@ INSERT INTO `union_modules` VALUES (NULL, '阿里云OSS', 'UnionCMS', '1.0.0', '
 
 ALTER TABLE `union_transfer_order` CHANGE `module` `module` VARCHAR( 100 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' COMMENT '模块',CHANGE `action` `action` VARCHAR( 100 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' COMMENT '回调函数名';
 ALTER TABLE `union_transfer_order` ADD `child_module` VARCHAR( 100 ) NULL DEFAULT '' COMMENT '子模块' AFTER `module` ;
-
+ALTER TABLE `union_members` ADD `pid` INT(11)  DEFAULT '1' COMMENT '上级' AFTER `signature`, ADD `pid_path` VARCHAR(255) DEFAULT '1' COMMENT '上级路径' AFTER `pid`;
+ALTER TABLE `union_members` ADD `background_cover` varchar(255) DEFAULT '' COMMENT '背景封面' AFTER `pid_path`;
 
 
 

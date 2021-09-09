@@ -14,7 +14,7 @@
 <script src="{{ADMIN_ASSET}}assets/js/jquery.ui.custom.js"></script>
 
 <!--Sweet Alerts-->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+<script type="text/javascript" src="{{ADMIN_ASSET}}assets/js/jquery-confirm.min.js"></script>
 
 <script type="text/javascript" src="{{ADMIN_ASSET}}assets/other/DialogJS/javascript/zepto.min.js"></script>
 <script type="text/javascript" src="{{ADMIN_ASSET}}assets/other/DialogJS/javascript/dialog.min.js"></script>

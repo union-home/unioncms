@@ -131,8 +131,8 @@
 <script type="text/javascript" src="{{ADMIN_ASSET}}assets/other/DialogJS/javascript/dialog.min.js"></script>
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+<link rel="stylesheet" href="{{ADMIN_ASSET}}assets/css/jquery-confirm.min.css">
+<script type="text/javascript" src="{{ADMIN_ASSET}}assets/js/jquery-confirm.min.js"></script>
 
 
 <script type="text/javascript">

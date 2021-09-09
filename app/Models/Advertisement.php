@@ -49,4 +49,23 @@ class Advertisement extends Model {
         if ($all['images']) $up['images'] = $all['images'];
         return self::where('id', $all['id'])->update($up);
     }
+
+    //获取广告
+    public static function apiGetAdvertisementList($arr) {
+        $len = $arr['pagesize'] ?: 10;
+        $res = self::where('status', 1)
+            ->where(function ($q) use ($arr) {
+                if ($arr['req_type']) $q->where('req_type', $arr['req_type']);
+                if ($arr['display_position']) $q->where('display_position', $arr['display_position']);
+                if ($arr['display_page']) $q->where('display_page', $arr['display_page']);
+                if ($arr['display_module']) $q->where('display_module', $arr['display_module']);
+            })
+            ->limit($len)
+            ->get(['id', 'images', 'url'])
+            ->toArray();
+        foreach ($res as &$val) {
+            $val['images'] = GetUrlByPath($val['images']);
+        }
+        return $res;
+    }
 }

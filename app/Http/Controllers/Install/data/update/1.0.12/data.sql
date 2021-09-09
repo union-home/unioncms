@@ -1,6 +1,6 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
-
+DROP TABLE IF EXISTS `union_video`;
 CREATE TABLE `union_video` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自动增长ID',
   `type` varchar(50) CHARACTER SET utf8 DEFAULT '' COMMENT '类型',
@@ -17,7 +17,7 @@ CREATE TABLE `union_video` (
   KEY `is_hot` (`is_hot`) USING BTREE,
   KEY `is_rec` (`is_rec`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='视频表';
-
+DROP TABLE IF EXISTS `union_video_category`;
 CREATE TABLE `union_video_category` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `name` varchar(255) DEFAULT '' COMMENT '分类名称',

@@ -39,7 +39,7 @@
     </div>
     @include("install.footer")
     <script src="{{INSTALL_ASSET}}/assets/js/wind.js"></script>
-    <script src="{{INSTALL_ASSET}}/assets/js/noty/noty-2.4.1.js?v=123"></script>
+    <script src="{{INSTALL_ASSET}}/assets/js/noty/noty-2.4.1.js"></script>
     <script type="text/html" id="exec-success-msg-tpl">
         <li>
             <i class="fa fa-check correct"></i>
@@ -127,7 +127,7 @@
                             }
                         }
 
-                    } else if (data.code == 0) {
+                    } else  {  //if (data.code == 0)
 
                         var tpl = execFailTpl;
                         tpl     = tpl.replace(/\{message\}/g, line + '.' + data.msg);
