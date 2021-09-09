@@ -1472,8 +1472,6 @@ function get_zip_originalsize($filename, $path) {
     }
     //将文件名和路径转成windows系统默认的gb2312编码，否则将会读取不到
     $filename = iconv("utf-8", "gb2312", $filename);
-    $path = trim($path, "/");
-    $path = trim($path, "\\");
     $path = iconv("utf-8", "gb2312", $path) . "/";
     //打开压缩包
     $resource = zip_open($filename);
