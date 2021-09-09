@@ -1,51 +1,79 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+软件简介
+开发语言：PHP+Mysql
+环境要求：Nginx、Apache、IIS, PHP7.1(7.2 | 7.3)、Mysql5.7.43
+系统支持：支持远程获取、FreeType、多国语言、多种货币
+风格管理：UnionCms海量主题设计及用户自定义模板
+版权所有：联盟之都网络科技（深圳）有限公司
+官方网站：www.unioncms.cn
+适用范围：企业官网、个人网站、政府学校网站、垂直门户网站、B2B/B2C商城网站等
+发展历程：2018年发布至今
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+UnionCms内容管理系统采用低耦合、模块化设计思想，助力行业用户快速打造一站式建站系统，让用户轻松搭建自己的私有化项目，系统基于laravel 5框架，采用最新web2.0标准前端框架，简单适用，功能完善。系统内置海量界面风格主题，多平台集成加持（例短信群发系统、3D相册、开发者中心等），内容发布管理，模块安装/卸载，插件管理以及完善的后台管理权限+开发者助手等丰富功能，为企业轻松打造具有颠覆性的精品网站。
 
-## About Laravel
+UnionCMS功能介绍
+界面风格
+1、UnionCms内置海量主题，多种风格设计切换
+2、用户可设置网站模板总体风格，如整体版面布局、色调、简繁等；
+4、多语言网站支持使用同一模板，也可根据每种语言设置不同模板；
+5、用户自定义模板，用户可自行编写或修改模板；
+7、页面banner动态大图展示功能（按需定制），自定义banner按钮、文字、颜色等；
+8、产品、图片、宣传标语等网站展示布局按用户诉求设置；
+9、企业Logo设计，突出企业形象和风格 ;
+10、全新版面，多用主题，支持系统所有功能
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+网站内容
+1、支持企业简介、文章资讯、产品类目、下载端、图形内容、企业招聘等信息的发布；
+2、支持第三方插件及管理，支持设置友情链接（链接自定义网址）；
+3、支持设置弹出窗口，是否弹出、窗口大小、窗口内容等;
+4、信息展示功能（包括但不限于产品分类、品牌管理、产品资料）；
+5、页面内容编辑功能（包括但不限于视频上传，图片下载至本地、内容排版等）；
+6、支持设置产品内容页选项功能，支持按产品类目设置选项卡个数与名称；
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+SEO优化
+1、支持自定义网站页面标题、关键词、站点描述、适用领域等；
+2、支持自定义设置自动或手动生成静态页面以及不同页面的静态页面名称；
+3、支持伪静态生成功能，自定义伪静态页面名称；
+4、支持站内定向锚文本、标签、上一条下一条功能栏位，增加网站内链和突出关键词；
+5、WEB前端语义化标签，让搜索引擎精准、高效处理数据;
+6、合理使用meta标签、h1/h2/h3标签元素、图片ALT、超链接Title，让搜索引擎更容易识别；
+7、前台模块CSS、HTML、Javascript完全分离，结构层次清晰,利于增加搜索引擎友好度；
+8、前台源码简洁漂亮，很受搜索引擎的青睐；
+9、支持站内地图功能，引导搜索引擎抓取网站页面生成HTML等格式；
+11、支持手动添加管理tag标签，支持页面内容tag标签自动聚合；
+12、支持不带www域名跳转到带www域名功能，支持自定义404页面内容；
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+互动营销
+1、网站内置在线交流窗口，访客无需任何前提条件即时通讯，降低客户沟通门槛；
+2、支持在线反馈功能，访客询单、订购、报名、建议等表单提交后自动发送邮件/短信到设定的邮箱或手机；
+3、支持在线留言功能，后台管理员可直接通过审核和回复访客留言；
+4、支持添加第三方统计代码，能够记录来访、受访、来路、搜索引擎等信息，可针对访问信息规划设计推广方向；
+5、内置多个平台（短信群发、3D相册等）实现多个渠道推广导流，达到更高传播效果；
 
-## Learning Laravel
+系统支持
+1、支持多国语言及币种；
+2、支持后台管理并自定义网站语言，支持设置网站默认展示语言；
+3、支持多语言网站使用同一模板，也可根据每种语言设置不同模板；
+4、支持简繁字体切换功能，无需自行翻译；
+5、支持采用不同语言/不同域名访问系统；
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+会员功能
+1、支持手机、邮箱等多种在线注册方式；
+2、支持模块参数设置(如产品价格、产品资料)指定查看或下载；
+3、商城模块支持按会员分类设置不同的价格折扣和优惠；
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+后台管理员功能
+1、支持新增、删除、编辑管理员信息 ;
+2、支持设置管理员操作权限（如限制其删除、修改、新增功能）；
+3、支持设置指定管理员管理一种或多种网站语言；
+4、支持设置管理员是否拥有在线更新程序等权限；
 
-## Laravel Sponsors
+安全与效率
+1、支持网站数据备份，可以一键备份整站并下载到本地电脑，可在后台恢复备份的数据；
+2、支持后台登录页面的路径名称修改，利于隐藏后台登录网址，提高网站安全性能；
+3、内置前后台验证码、IP黑名单、敏感字符过滤机制能有效阻拦恶意攻击；
+4、站内页面采用缓存机制，有效提升访问速度，降低服务器资源消耗；
+5、支持记录后台关键操作功能；支持在线升级；
+6、支持密码找回功能，可通过手机短信、邮件找回密码；
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
-
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+源码与二次开发
+1、开源CMS，可轻松进行二次开发；
